@@ -43,6 +43,7 @@
 .main-content {
     background-color: rgb(226, 232, 240);
     padding: 20px;
+    padding-bottom: 50px;
     grid-row: 2/3;
     grid-column: 2/3;
     display: grid;
@@ -54,8 +55,8 @@
 .projects {
     grid-row: 2/5;
     display: grid;
-    grid: 300px / repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 300px;
+    grid: none / repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 1fr;
     gap: 20px;
     min-width: 400px;
 }
@@ -63,24 +64,39 @@
 .projects > div {
     background-color: white;
     border-radius: 5px;
-    border-left: 10px solid gold;
-    min-width: 300px;
+    border-left: 10px solid rgb(240, 180, 41);
+    /* min-width: 300px; */
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.projects p {
+    font-size: 1.1rem;
+    padding-top: 5px;
 }
 
 .announcements {
     background-color: white;
     border-radius: 5px;
-    padding: 20px;
+    padding: 40px;
     grid-row: 2/3;
     grid-column: 2/3;
     display: grid;
-    grid: repeat(3, 50px);
+    grid-template-rows: repeat(3, minmax(50px, 1fr));
+    justify-items: center;
+    align-items: center;
+    max-height: 445px;
+    min-width: 200px;
+}
+
+.announcements>div {
     overflow: hidden;
 }
 
-.announcements div p{
-    text-overflow: ellipsis;
-    min-width: 0;
+.announcements div:first-child,
+.announcements div:first-child + div {
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 15px;
 }
 
 .trending {
@@ -90,12 +106,22 @@
     grid-row: 4/5;
     grid-column: 2/3;
     grid: repeat(4, 50px);
+    max-height: 445px;
+    min-width: 200px;
 }
 
 h3 {
     font-size: 1.3rem;
+    font-weight: 700;
+    align-self: end;
 }
 
 h4 {
     font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 5px;
 }
