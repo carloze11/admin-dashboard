@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Oswald:wght@400;700&family=Roboto&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <title>Admin Dashboard</title>
 </head>
@@ -16,11 +17,18 @@
         <header class="header">
             <div class="search">
                 <div>
+                    <img src="icons/magnify.svg" alt="search icon" class="search-icon">
                     <input type="text">
                 </div>
-                <div><button></button></div>
-                <div><button></button></div>
-                <div><button>Carlos Estrada</button></div>
+                <div class="notification">
+                    <img src="icons/bell-ring-outline.svg" alt="notification">
+                </div>
+                <div>
+                    <button></button>
+                </div>
+                <div>
+                    <span>Carlos Estrada</span>
+                </div>
             </div>
             <div class="greeting">
                 <div>
@@ -28,7 +36,7 @@
                     <span>Hi there,</span>
                     <h2>Carlos Estrada (@carlosestrawda)</h2>
                 </div>
-                <div>
+                <div class="buttons">
                     <button>New</button>
                     <button>Upload</button>
                     <button>Share</button>
@@ -42,20 +50,29 @@
             </div>
             <div class="nav">
                 <div>
-                    <ul>
-                        <li>Home</li>
-                        <li>Profile</li>
-                        <li>Messages</li>
-                        <li>History</li>
-                        <li>Tasks</li>
-                        <li>Communities</li>
+                    <ul class="links">
+                        <img src="icons/home.svg" alt="home-icon">
+                        <li class="home">Home</li>
+                        <img src="icons/card-account-details-outline.svg" alt="account-icon">
+                        <li class="profile">Profile</li>
+                        <img src="icons/message-reply-outline.svg" alt="message-icon">
+                        <li class="messages">Messages</li>
+                        <img src="icons/clock-time-four-outline.svg" alt="clock-icon">
+                        <li class="history">History</li>
+                        <img src="icons/note-multiple-outline.svg" alt="note-icon">
+                        <li class="tasks">Tasks</li>
+                        <img src="icons/account-group.svg" alt="group-icon">
+                        <li class="communities">Communities</li>
                     </ul>
                 </div>
                 <div>
-                    <ul>
-                        <li>Settings</li>
-                        <li>Support</li>
-                        <li>Privacy</li>
+                    <ul class="info">
+                        <img src="icons/cog-outline.svg" alt="cog-icon">
+                        <li class="settings">Settings</li>
+                        <img src="icons/help-box.svg" alt="help-icon">
+                        <li class="support">Support</li>
+                        <img src="icons/shield-check.svg" alt="shield-icon">
+                        <li class="privacy">Privacy</li>
                     </ul>
                 </div>
             </div>
