@@ -20,7 +20,7 @@
 
 .search {
     display: grid;
-    grid: 1fr / 8fr 50px 1fr 2fr;
+    grid: 1fr / 8fr 50px 100px 2fr;
 }
 
 .search div:first-child {
@@ -42,8 +42,17 @@
     background-color: rgb(226, 232, 240);
 }
 
-.search div:last-child {
+.top-profile-pic {
     text-align: center;
+}
+
+.top-profile-pic img{
+    width: 75px;
+    border-radius: 50%;
+}
+
+.search div:last-child {
+    text-align: left;
     font-size: 1.4rem;
     font-weight: 600;
 }
@@ -54,9 +63,27 @@
     align-items: center;
 }
 
+.greeting-pic{
+    display: grid;
+    grid: 1fr 1fr /100px 1fr;
+    align-items: center;
+    white-space: nowrap;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
+.greeting img {
+    grid-row: 1/3;
+    width: 75px;
+    border-radius: 50%;
+    place-self: center;
+}
+
 .greeting span {
+    align-self: end;
     font-size: 1.2rem;
     font-weight: 600;
+    padding-bottom: 10px;
 }
 
 .greeting h2 {
@@ -92,7 +119,8 @@
     grid-row: 1/3;
     display: grid;
     grid: 100px 1fr / 1fr;
-    padding: 35px 20px 0 20px;
+    padding: 0 20px;
+    max-width: 250px;
 }
 
 .dashboard{
@@ -100,14 +128,21 @@
     grid-template-columns: 50px 1fr;
 }
 
+.dashboard img {
+    width: 50px;
+    place-self: center;
+    color: white;
+}
+
 .dashboard h1 {
     grid-column: 2/3;
+    place-self: center;
 }
 
 .nav {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -154,23 +189,36 @@
     grid-row: 2/5;
     display: grid;
     grid: none / repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 1fr;
+    grid-auto-rows: 280px;
+    grid-auto-columns: 400px;
     gap: 20px;
-    min-width: 400px;
 }
 
 .projects > div {
     background-color: white;
     border-radius: 5px;
     border-left: 10px solid rgb(240, 180, 41);
-    /* min-width: 300px; */
     padding: 20px;
-    padding-top: 50px;
+    display: grid;
+
 }
 
 .projects p {
     font-size: 1.1rem;
     padding-top: 5px;
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    padding-top: 10px;
+    align-self: end;
+    justify-content: end;
+}
+
+.img-grid img {
+    width: 30px;
+    place-self: end;
 }
 
 .announcements {
@@ -206,6 +254,20 @@
     grid: repeat(4, 50px);
     max-height: 445px;
     min-width: 200px;
+    display: grid;
+    grid: repeat(4, 1fr) / 1fr 3fr;
+    gap: 15px;
+}
+
+.trending div {
+    grid-column: 2/3;
+    align-self: center;
+}
+
+.trending img {
+    width: 75px;
+    grid-column: 1/2;
+    place-self: center;
 }
 
 h3 {
@@ -216,12 +278,17 @@ h3 {
 
 h4 {
     font-size: 1.2rem;
+    align-self: end;
 }
 
 h5 {
     font-size: 1.1rem;
     font-weight: 600;
     padding-bottom: 5px;
+}
+
+h6 {
+    font-size: 1.2rem;
 }
 
 
