@@ -243,6 +243,7 @@
 .announcements div:first-child + div {
     border-bottom: 2px solid lightgray;
     padding-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .trending {
